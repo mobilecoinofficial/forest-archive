@@ -155,7 +155,7 @@ export BOT_NUMBER=+15551234567 # number you've obtained for your bot
 export CAPTCHA=signal-recaptcha-v2.6LfBXs0bAAAAAAjkDyyI1Lk5gBAUWfhI_bIyox5W.registration.$(curl -s --data-binary "https://signalcaptchas.org/registration/generate.html" https://human-after-all-21.fly.dev/6LfBXs0bAAAAAAjkDyyI1Lk5gBAUWfhI_bIyox5W | jq -r .solution.gRecaptchaResponse)
 ./signal-cli --config . -u $BOT_NUMBER register --captcha $CAPTCHA
 ```
-The ```CAPTCHA``` command may take a minute or so to complete. 
+The ```CAPTCHA``` command may take a minute or so to complete.
 
 You will receive an SMS with a 6 digit verification code. Use that code with the verify command to verify your phone number.
 
@@ -248,7 +248,7 @@ Then, you can upload your datastore with:
 
 These are the environment variables and flags that the bots read to work. Not all of them are necessary for every bot. As you saw hellobot only used a subset of these.
 
-- `ENV`: if running locally, which {ENV}_secrets file to use. 
+- `ENV`: if running locally, which {ENV}_secrets file to use.
 - `BOT_NUMBER`: the number for the bot's signal account
 - `ADMIN`: admin's phone number, primarily as a fallback recipient for invalid webhooks; may also be used to send error messages and metrics.
 - `ADMINS`: additional list of people who can use admin commands
@@ -267,7 +267,7 @@ These are the environment variables and flags that the bots read to work. Not al
 - `GOOGLE_MAPS_API`: google maps api key
 - `PAUTH`: used for PersistDict; see </pdictng_docs/README.md>
 - `SALT`: used for PersistDict
-- `METRICS_SALT`: used for logging when users were first and last seen. Must be set to log 
+- `METRICS_SALT`: used for logging when users were first and last seen. Must be set to log
 
 ## Binary flags
 - `DOWNLOAD`: download/upload datastore from the database instead of using what's in the current working directory.
@@ -276,7 +276,7 @@ These are the environment variables and flags that the bots read to work. Not al
 - `MONITOR_WALLET`: monitor transactions from full-service. Relevant only if you're giving users a payment address to send mobilecoin to instead of using signal pay.  Experimental, do not use.
 - `LOGFILES`: create a debug.log.
 - `ADMIN_METRICS`: send python and roundtrip timedeltas for each command to ADMIN.
-- `ENABLE_MAGIC`: use string distence and expansions 
+- `ENABLE_MAGIC`: use string distence and expansions
 
 ## Contributing
 
@@ -289,3 +289,20 @@ Use [black](https://github.com/psf/black) to format your python code. Prefer ver
 `pip install black pylint mypy types-protobuf types-termcolor`
 
 Install black pre-commit hook with `ln -s (readlink -f .githooks/pre-commit) .git/hooks/pre-commit` on fish, or `ln -s $(readlink -f .githooks/pre-commit) .git/hooks/pre-commit` on bash. Requires black to be installed.
+
+
+## Republish and History Reset
+
+Unfortunately this repo required a reset of its history and unlinking from old forks, PRs and issues.  We want to recognize all of the original contributors.
+
+[@technillogue](https://github.com/technillogue)
+[@i-infra](https://github.com/i-infra)
+[@itdaniher](https://github.com/itdaniher)
+[@transfaeries](https://github.com/transfaeries)
+[@iamalwaysuncomfortable](https://github.com/iamalwaysuncomfortable)
+[@cxloe](https://github.com/cxloe)
+[@taygetea](https://github.com/taygetea)
+[@deepfates](https://github.com/deepfates)
+[@5HT2](https://github.com/5HT2)
+[@colygon](https://github.com/colygon)
+[@OpalResplendent](https://github.com/OpalResplendent)
